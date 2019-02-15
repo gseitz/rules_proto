@@ -211,6 +211,8 @@ def copy_proto(ctx, descriptor, src):
     Returns:
       <Generated File> for the copied .proto
     """
+
+    print(ctx)
     proto = ctx.actions.declare_file(_get_proto_filename(src), sibling = descriptor)
     ctx.actions.run_shell(
         mnemonic = "CopyProto",
